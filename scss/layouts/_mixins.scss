@@ -1,0 +1,42 @@
+@mixin flex($wrap : false) {
+    display: flex;
+    flex-wrap: if($wrap, wrap, null);
+}
+
+@mixin flex-center($wrap : false) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: if($wrap, wrap, null);
+}
+
+@mixin border($style: none, $radius: 0em, $color) {
+    border-style: $style;
+    border-radius: $radius;
+    border-color: if($color,$color,null);
+}
+
+@mixin theme($background, $color) {
+    background-color: $background;
+    color: $color;
+}
+
+@mixin wallpaper($url) {
+    background-image: url($url);
+    background-attachment: fixed;
+    background-size: cover;
+}
+@mixin disable-select {
+    .disable-select {
+        user-select: none;
+        /* supported by Chrome and Opera */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+    }
+}

@@ -1,0 +1,331 @@
+.disable-select {
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+body {
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+nav {
+  padding: 0.4em;
+  display: flex;
+  justify-content: space-between;
+}
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav img {
+  width: 4em;
+  height: 3em;
+}
+
+.nav-check span {
+  float: right;
+  margin: 5px;
+}
+
+.nav-check-input {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.nav-check-span {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: #092c3e;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+
+.nav-check-input:checked ~ .nav-check-span {
+  background: white;
+}
+
+.nav-check-span::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.nav-check-input:checked ~ .nav-check-span::before {
+  transform: translateX(-50px);
+}
+
+.nav-check-span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #092c3e;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateX(50px);
+}
+
+.nav-check-input:checked ~ .nav-check-span::after {
+  transform: translateX(0px);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main > div {
+  margin: 0.6em;
+}
+
+.settings-icon > i {
+  float: right;
+  cursor: pointer;
+}
+.settings-icon > i:hover {
+  cursor: pointer;
+  color: rgba(38, 202, 202, 0.8666666667);
+}
+
+.field-inputs,
+.field-screen,
+.field-settings {
+  width: 90%;
+  padding: 0.7em;
+  border-style: none;
+  border-radius: 0.4em;
+}
+
+.error {
+  color: red;
+}
+
+.field-inputs > div > h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.inputs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.inputs-inner-container > input {
+  margin: 1em;
+  height: 2.4em;
+  text-align: center;
+  border-style: none;
+  border-radius: 0.4em;
+}
+
+.field-screen > div {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.field-settings > div:nth-child(1) {
+  border-radius: 0.2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field-settings > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.field-settings > div:nth-child(2) > div {
+  margin: 0.4em;
+}
+.field-settings > div:nth-child(2) > div > input {
+  width: 70%;
+  padding: 0.3em;
+  text-align: center;
+  border-style: none;
+  border-radius: 0.3em;
+}
+.field-settings > div:nth-child(3) {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field-settings > div:nth-child(3) > button {
+  margin: 0.4em;
+  padding: 0.4em;
+  width: 6em;
+  border-style: none;
+  border-radius: 0.3em;
+}
+.field-settings > div:nth-child(3) > button:hover {
+  color: brown;
+  box-shadow: 1px 1px 2px brown, 0 0 25px brown, 0 0 5px brown;
+}
+
+.field-contents {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.field-contents > div {
+  width: 20em;
+  margin: 0.5em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 0.4em;
+}
+
+.field-subject-div-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.field-subject-div-2 > select {
+  width: 6em;
+  height: 1.8em;
+  margin: 0.2em;
+  border-style: none;
+  border-radius: 0.4em;
+}
+
+.field-subject-div-2 > select:hover {
+  color: green;
+  box-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;
+}
+
+.field-subject-div-2 > button {
+  width: 3em;
+  height: 1.8em;
+  margin: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  border-radius: 0.4em;
+}
+
+.field-subject-div-2 > button:hover {
+  color: red;
+  box-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;
+}
+
+.field-adddbtn {
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field-adddbtn > button {
+  width: 5em;
+  height: 5em;
+  border-style: none;
+  border-radius: 2.5em;
+}
+
+.field-adddbtn > button:hover {
+  cursor: pointer;
+  color: rgba(38, 202, 202, 0.8666666667);
+  box-shadow: 1px 1px 2px rgba(38, 202, 202, 0.8666666667), 0 0 25px rgba(38, 202, 202, 0.8666666667), 0 0 5px rgba(38, 202, 202, 0.8666666667);
+}
+
+footer {
+  padding: 1em;
+  margin-top: auto;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  padding: 1em;
+}
+
+.footer-col:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-col > img {
+  width: 13em;
+  height: 10em;
+}
+
+.footer-row > a {
+  width: 4em;
+  height: 4em;
+  margin: 0.3em;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  border-radius: 2em;
+}
+
+.footer-row > a:hover {
+  background-color: #9f9f9f;
+}
+
+@media screen and (max-width: 767px) {
+  .inputs-container,
+.inputs-container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .field-contents {
+    width: 90%;
+  }
+}/*# sourceMappingURL=main.css.map */

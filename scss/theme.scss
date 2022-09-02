@@ -1,0 +1,36 @@
+@use "./layouts/mixins" as *;
+@use "./layouts/variables" as *;
+
+.background-lightTheme {
+  @include wallpaper(
+    "../images/steve-johnson-L3d2KZJoiKk-unsplash.jpg"
+  );
+}
+
+.background-darkTheme {
+  @include wallpaper("../images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
+}
+
+.solid-bckground-darkTheme {
+  @include theme($black-color, $white-color);
+}
+
+.solid-bckground-lightTheme {
+  @include theme($white-color, $black-color);
+}
+
+.blur-bckground-darkTheme {
+  @include theme(#2b2b2bc9, $white-color);
+}
+
+.blur-bckground-lightTheme {
+  @include theme(#ffffffcc, $black-color);
+}
+
+.icon-darkTheme {
+  @include theme(#767575, $white-color);
+}
+
+.icon-lightTheme {
+  @include theme(#dadada, $black-color);
+}

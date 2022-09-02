@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+
+    <!-- icon -->
+    <link rel="icon" href="./images/assets/circular leaf logo.png">
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="./scss/theme.css">
+    <link rel="stylesheet" href="./font-awesome/css/all.css">
+</head>
+
+<body class="background-lightTheme">
+    <header>
+        <nav class="solid-bckground-lightTheme disable-select">
+            <div>
+                <img src="./images/assets/circular leaf logo.png" alt="navbarlogo">
+            </div>
+            <div class="nav-check">
+                <span>DarkTheme&copy;</span>
+                <label>
+                    <input class="nav-check-input" type="checkbox" id="theme-btn" onclick="setTheme(this)">
+                    <span class="nav-check-span"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main onchange="compute()">
+        <div style class="field-inputs blur-bckground-lightTheme disable-select">
+            <div class="settings-icon"><i class="fa-solid fa-gear icon-hover-primary" onclick="openMenu()"></i></div>
+            <div>
+                <h1><i class="fa-solid fa-calculator"></i> GPA Calculator</h1>
+            </div>
+            <div class="inputs-container">
+                <div class="inputs-inner-container">
+                    <input type="text" id="curr-gpa" placeholder="Cummulative gpa">
+                    <span id="gpaError" class="error" hidden>*GPA not in range [0 ,4].</span>
+                </div>
+                <div class="inputs-inner-container">
+                    <input type="text" id="curr-hrs" placeholder="Cummulative hrs">
+                    <span id="timeError" class="error" hidden>*Invalid time.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="field-settings blur-bckground-lightTheme" id="field-settings" hidden>
+            <div class="solid-bckground-lightTheme">
+                <h4><i class="fa-solid fa-screwdriver-wrench"></i> Control Panel</h4>
+            </div>
+            <div id="field-settings-btn">
+                <button type="button" class="solid-bckground-lightTheme" onclick="setData()">Ok</button>
+                <button type="button" class="solid-bckground-lightTheme" onclick="resetData()">Reset</button>
+                <button type="button" class="solid-bckground-lightTheme" onclick="closeMenu()">Close</button>
+            </div>
+        </div>
+
+        <div class="field-screen blur-bckground-lightTheme">
+            <div class="screen-div">Term gpa : <span id="term-gpa"></span></div>
+            <div class="screen-div">Cummulative gpa : <span id="new-gpa"></span></div>
+            <div class="screen-div">Cummulative hrs : <span id="new-hrs"></span></div>
+        </div>
+
+        <div class="field-contents disable-select" id="field-contents"></div>
+
+        <div class="field-adddbtn disable-select" id="field-adddbtn">
+            <button class="solid-bckground-lightTheme" onclick="addField()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+    </main>
+
+    <footer class="disable-select solid-bckground-lightTheme">
+        <div class="footer-row">
+            <div class="footer-col">
+                <p>&copy; 2022 Pharaoh,org. All rights reserved.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem repudiandae exercitationem
+                    excepturi nam, ex inventore dolore autem quo sit possimus voluptatum ea, illum, quasi similique aut
+                    necessitatibus nisi aliquam.</p>
+            </div>
+            <div class="footer-col">
+                <img src="./images/assets/circular leaf logo.png" alt="footer-logo">
+            </div>
+        </div>
+        <div class="footer-row">
+            <a href="https://www.facebook.com/AhmedMaherElSaeidi/" class="icon-lightTheme"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/_Ahmed__Maher?fbclid=IwAR2u4QEE9sZRQ6hXfLz45Vdiucn3r53sgy-wGiqu0yYf4KtdOuFwGCzjmtQ"
+                class="icon-lightTheme"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/AhmedMaherElSaeidi" class="icon-lightTheme"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ahmedmaherelsaeidi/" class="icon-lightTheme"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

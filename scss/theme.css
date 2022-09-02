@@ -1,0 +1,41 @@
+.background-lightTheme {
+  background-image: url("../images/steve-johnson-L3d2KZJoiKk-unsplash.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.background-darkTheme {
+  background-image: url("../images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.solid-bckground-darkTheme {
+  background-color: black;
+  color: white;
+}
+
+.solid-bckground-lightTheme {
+  background-color: white;
+  color: black;
+}
+
+.blur-bckground-darkTheme {
+  background-color: rgba(43, 43, 43, 0.7882352941);
+  color: white;
+}
+
+.blur-bckground-lightTheme {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.icon-darkTheme {
+  background-color: #767575;
+  color: white;
+}
+
+.icon-lightTheme {
+  background-color: #dadada;
+  color: black;
+}/*# sourceMappingURL=theme.css.map */
