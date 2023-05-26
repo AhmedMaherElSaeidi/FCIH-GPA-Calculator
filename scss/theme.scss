@@ -3,12 +3,12 @@
 
 .background-lightTheme {
   @include wallpaper(
-    "../images/steve-johnson-L3d2KZJoiKk-unsplash.jpg"
+    "../assets/images/steve-johnson-L3d2KZJoiKk-unsplash.jpg"
   );
 }
 
 .background-darkTheme {
-  @include wallpaper("../images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
+  @include wallpaper("../assets/images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
 }
 
 .solid-bckground-darkTheme {

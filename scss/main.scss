@@ -8,110 +8,22 @@ body {
   min-height: 100vh;
   padding: 0px;
   margin: 0px;
-}
-
-//NAVBAR
-nav {
-  padding: 0.4em;
-  @include flex;
-  justify-content: space-between;
-  > div {
-    @include flex-center;
-  }
-  img {
-    width: 4em;
-    height: 3em;
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > section {
+      margin: 0.5em;
+    }
   }
 }
 
-.nav-check span {
-  float: right;
-  margin: 5px;
-}
-
-.nav-check-input {
-  -webkit-appearance: none;
-  visibility: hidden;
-  display: none;
-}
-
-.nav-check-span {
-  position: relative;
-  display: block;
-  width: 40px;
-  height: 20px;
-  background: #092c3e;
-  cursor: pointer;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: ease-in 0.5s;
-}
-
-.nav-check-input:checked ~ .nav-check-span {
-  background: $white-color;
-}
-
-.nav-check-span::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  background: $white-color;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transition: 0.5s;
-}
-
-.nav-check-input:checked ~ .nav-check-span::before {
-  transform: translateX(-50px);
-}
-
-.nav-check-span::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  background: #092c3e;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transition: 0.5s;
-  transform: translateX(50px);
-}
-
-.nav-check-input:checked ~ .nav-check-span::after {
-  transform: translateX(0px);
-}
-
-//Field Container
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-main > div {
-  margin: 0.6em;
-}
-
-//Field inputs & Field Screen
-.settings-icon {
-  > i {
-    float: right;
-    cursor: pointer;
-  }
-  > i:hover {
-    cursor: pointer;
-    color: $addbtn-hover;
-  }
-}
-
+//field-inputs, field-settings, & field-screen
 .field-inputs,
-.field-screen,
-.field-settings {
+.field-settings,
+.field-screen {
   width: 90%;
-  padding: 0.7em;
+  padding: 0.75em 0.5em;
   @include border(none, 0.4em, false);
 }
 
@@ -119,179 +31,78 @@ main > div {
   color: red;
 }
 
-.field-inputs > div > h1 {
-  font-size: 2.3em;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 0.1em;
-}
-
-.inputs-container {
-  @include flex-center(true);
-}
-
-.inputs-inner-container > input {
-  margin: 1em;
-  height: 2.4em;
-  text-align: center;
-  @include border(none, 0.4em, false);
-}
-
-.field-screen > div {
-  font-size: 1.2em;
-  line-height: 1.5em;
-}
-
-//Field Settings
-.field-settings {
-  > div:nth-child(1) {
-    border-radius: 0.2em;
-    margin-bottom: 1em;
-    @include flex-center;
+.field-inputs {
+  > section > h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.1em;
   }
-  > div:nth-child(2) {
+  > .settings-icon {
+    > i {
+      float: right;
+      cursor: pointer;
+    }
+    > i:hover {
+      cursor: pointer;
+      color: $addbtn-hover;
+    }
+  }
+  > .inputs-container {
     @include flex-center(true);
-    justify-content: start;
-    > div {
-      margin: 0.4em;
-      > input {
-        width: 70%;
-        padding: 0.3em;
-        text-align: center;
-        border-style: none;
-        border-radius: 0.3em;
-      }
-    }
-  }
-  > div:nth-child(3) {
-    margin-top: 1em;
-    @include flex-center;
-    > button {
-      margin: 0.4em;
-      padding: 0.4em;
-      width: 6em;
-      border-style: none;
-      border-radius: 0.3em;
-    }
-
-    > button:hover {
-      color: $settings-btn-hover;
-      box-shadow: 1px 1px 2px $settings-btn-hover,
-        0 0 25px $settings-btn-hover, 0 0 5px $settings-btn-hover;
+    > .inputs-items > input {
+      margin: 1em;
+      height: 2.4em;
+      text-align: center;
+      @include border(none, 0.4em, false);
     }
   }
 }
 
-//Field Contents
-.field-contents {
-  width: 70%;
-  @include flex-center(true);
-}
-
-.field-contents > div {
-  width: 20em;
-  margin: 0.5em;
-  padding: 0.5em;
+.field-screen {
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  border-radius: 0.4em;
-}
-
-.field-subject-div-2 {
-  @include flex-center(true);
-}
-
-.field-subject-div-2 > select {
-  width: 6em;
-  height: 1.8em;
-  margin: 0.2em;
-  @include border(none, 0.4em, false);
-}
-
-.field-subject-div-2 > select:hover {
-  color: $select-hover;
-  box-shadow: 1px 1px 2px $select-hover, 0 0 25px $select-hover,
-    0 0 5px $select-hover;
-}
-
-.field-subject-div-2 > button {
-  width: 3em;
-  height: 1.8em;
-  margin: 0.2em;
-  @include flex-center;
-  @include border(none, 0.4em, false);
-}
-
-.field-subject-div-2 > button:hover {
-  color: $removebtn-hover;
-  box-shadow: 1px 1px 2px $removebtn-hover, 0 0 25px $removebtn-hover,
-    0 0 5px $removebtn-hover;
-}
-
-//Field Addbtn
-.field-adddbtn {
-  margin: 1em;
-  @include flex-center;
-}
-
-.field-adddbtn > button {
-  width: 5em;
-  height: 5em;
-  @include border(none, 2.5em, false);
-}
-
-.field-adddbtn > button:hover {
-  cursor: pointer;
-  color: $addbtn-hover;
-  box-shadow: 1px 1px 2px $addbtn-hover, 0 0 25px $addbtn-hover,
-    0 0 5px $addbtn-hover;
-}
-
-//FOOTER
-footer {
-  padding: 1em;
-  margin-top: auto;
-  flex-direction: column;
-  @include flex(true);
-}
-
-.footer-row {
-  @include flex-center(true);
-}
-
-.footer-col {
-  flex: 1;
-  padding: 1em;
-}
-
-.footer-col:nth-child(2) {
-  @include flex-center;
-}
-
-.footer-col > img {
-  width: 13em;
-  height: 10em;
-}
-
-.footer-row > a {
-  width: 4em;
-  height: 4em;
-  margin: 0.3em;
-  color: inherit;
-  text-decoration: none;
-  @include flex-center(false);
-  @include border(none, 2em, false);
-}
-
-.footer-row > a:hover {
-  background-color: $icon-hover;
+  align-items: center;
+  justify-content: space-between;
+  > section {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  .RadialProgress {
+    --hue: 280;
+    --holesize: 65%;
+    --track-bg: #242424;
+    
+    block-size: 15vmin;
+    inline-size: 15vmin;
+    min-inline-size: 30px;
+    min-block-size: 30px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    filter: brightness(1);
+    font-size: max(3vmin, 0.5rem); /* Half the original size */
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 50%;
+      z-index: -1;
+      background: conic-gradient(#08bbbb var(--progress, 0%), hsl(var(--hue) 100% 100%), hsl(var(--hue) 100% 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
+      mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+    }
+  }
+  
 }
 
 @media screen and (max-width: 767px) {
   //Field inputs & Field Screen
   .inputs-container,
-  .inputs-container > div {
+  .inputs-container > section {
     @include flex-center;
     flex-direction: column;
   }

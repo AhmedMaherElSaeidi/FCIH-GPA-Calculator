@@ -1,0 +1,72 @@
+@use "./layouts/mixins" as *;
+@use "./layouts/variables" as *;
+
+main > .field-contents {
+  width: 80%;
+  @include flex-center(true);
+
+  > .field-subject {
+    width: 20em;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    > .field-subject-inputs {
+      @include flex-center(true);
+    }
+
+    > .field-subject-inputs > select {
+      width: 6em;
+      height: 1.8em;
+      margin: 0.2em;
+      @include border(none, 0.4em, false);
+    }
+
+    > .field-subject-inputs > select:hover {
+      color: $select-hover;
+      box-shadow: 1px 1px 6px $select-hover, 0 0 5px $select-hover, 0 0 5px $select-hover;
+    }
+
+    > .field-subject-inputs > button {
+      width: 3em;
+      height: 1.8em;
+      margin: 0.2em;
+      @include flex-center;
+      @include border(none, 0.4em, false);
+    }
+
+    > .field-subject-inputs > button:hover {
+      color: $removebtn-hover;
+      box-shadow: 1px 1px 6px $removebtn-hover, 0 0 5px $removebtn-hover, 0 0 5px $removebtn-hover;
+    }
+  }
+}
+//Field Addbtn
+main > .field-adddbtn {
+  margin: 1em;
+  @include flex-center;
+  > button {
+    width: 5em;
+    height: 5em;
+    @include border(none, 2.5em, false);
+  }
+
+  > button:hover {
+    cursor: pointer;
+    color: $addbtn-hover;
+    box-shadow: 1px 1px 6px $addbtn-hover, 0 0 25px $addbtn-hover, 0 0 25px $addbtn-hover;
+  }
+
+  > button:hover::after {
+    content: "Add Subject";
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main > .field-contents {
+    width: 90%;
+  }
+}

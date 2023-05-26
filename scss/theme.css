@@ -1,11 +1,11 @@
 .background-lightTheme {
-  background-image: url("../images/steve-johnson-L3d2KZJoiKk-unsplash.jpg");
+  background-image: url("../assets/images/steve-johnson-L3d2KZJoiKk-unsplash.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
 
 .background-darkTheme {
-  background-image: url("../images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
+  background-image: url("../assets/images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
   background-attachment: fixed;
   background-size: cover;
 }

@@ -1,0 +1,96 @@
+nav .navbar-brand > img {
+  width: 4em;
+  height: 3em;
+}
+nav li {
+  padding: 0em 0.35em;
+  margin: 0em 0.15em;
+}
+nav .navbar-toggler-icon:hover,
+nav li:hover {
+  border-radius: 0.25em;
+  box-shadow: 1px 1px 5px rgba(38, 202, 202, 0.8666666667), 0px 0px 5px rgba(38, 202, 202, 0.8666666667), 0px 0px 5px rgba(38, 202, 202, 0.8666666667);
+}
+nav .navbar-toggler-icon:hover .tx-hover,
+nav li:hover .tx-hover {
+  color: rgba(38, 202, 202, 0.8666666667) !important;
+}
+nav .dropdown-menu li:hover {
+  background-color: silver !important;
+}
+nav .navbar-toggler:focus,
+nav .navbar-toggler:focus-visible {
+  box-shadow: none;
+}
+nav .navbar-toggler-icon {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.25em;
+  color: rgba(38, 202, 202, 0.8666666667);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .nav-link {
+  color: inherit !important;
+}
+
+.nav-check {
+  display: flex;
+  align-items: center;
+  padding: 0.52em;
+}
+.nav-check span {
+  float: right;
+  margin-right: 0.45em;
+}
+.nav-check .nav-check-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  visibility: hidden;
+  display: none;
+}
+.nav-check .nav-check-span {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: #1b76a5;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+.nav-check .nav-check-input:checked ~ .nav-check-span {
+  background: white;
+}
+.nav-check .nav-check-span::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.nav-check .nav-check-input:checked ~ .nav-check-span::before {
+  transform: translateX(-50px);
+}
+.nav-check .nav-check-span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #23739b;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateX(50px);
+}
+.nav-check .nav-check-input:checked ~ .nav-check-span::after {
+  transform: translateX(0px);
+}/*# sourceMappingURL=navbar.css.map */
