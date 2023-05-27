@@ -28,75 +28,75 @@ nav {
   .navbar-toggler-icon {
     font-size: 1.2em;
     font-weight: bold;
-    padding: .25em;
+    padding: 0.25em;
     color: $addbtn-hover;
     @include flex-center(false);
   }
   .nav-link {
     color: inherit !important;
   }
-}
 
-.nav-check {
-  display: flex;
-  align-items: center;
-  padding: 0.52em;
-  span {
-    float: right;
-    margin-right: 0.45em;
-  }
-  .nav-check-input {
-    appearance: none;
-    visibility: hidden;
-    display: none;
-  }
+  .nav-check {
+    display: flex;
+    align-items: center;
+    padding: 0.52em;
+    span {
+      float: right;
+      margin-right: 0.45em;
+    }
+    .nav-check-input {
+      appearance: none;
+      visibility: hidden;
+      display: none;
+    }
 
-  .nav-check-span {
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 20px;
-    background: #1b76a5;
-    cursor: pointer;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: ease-in 0.5s;
-  }
+    .nav-check-span {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 20px;
+      background: #1b76a5;
+      cursor: pointer;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: ease-in 0.5s;
+    }
 
-  .nav-check-input:checked ~ .nav-check-span {
-    background: $white-color;
-  }
+    .nav-check-input:checked ~ .nav-check-span {
+      background: $white-color;
+    }
 
-  .nav-check-span::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    background: $white-color;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    transition: 0.5s;
-  }
+    .nav-check-span::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background: $white-color;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transition: 0.5s;
+    }
 
-  .nav-check-input:checked ~ .nav-check-span::before {
-    transform: translateX(-50px);
-  }
+    .nav-check-input:checked ~ .nav-check-span::before {
+      transform: translateX(-50px);
+    }
 
-  .nav-check-span::after {
-    content: "";
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    background: #23739b;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    transition: 0.5s;
-    transform: translateX(50px);
-  }
+    .nav-check-span::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: #23739b;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transition: 0.5s;
+      transform: translateX(50px);
+    }
 
-  .nav-check-input:checked ~ .nav-check-span::after {
-    transform: translateX(0px);
+    .nav-check-input:checked ~ .nav-check-span::after {
+      transform: translateX(0px);
+    }
   }
 }

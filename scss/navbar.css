@@ -34,24 +34,23 @@ nav .navbar-toggler-icon {
 nav .nav-link {
   color: inherit !important;
 }
-
-.nav-check {
+nav .nav-check {
   display: flex;
   align-items: center;
   padding: 0.52em;
 }
-.nav-check span {
+nav .nav-check span {
   float: right;
   margin-right: 0.45em;
 }
-.nav-check .nav-check-input {
+nav .nav-check .nav-check-input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   visibility: hidden;
   display: none;
 }
-.nav-check .nav-check-span {
+nav .nav-check .nav-check-span {
   position: relative;
   display: block;
   width: 40px;
@@ -62,10 +61,10 @@ nav .nav-link {
   overflow: hidden;
   transition: ease-in 0.5s;
 }
-.nav-check .nav-check-input:checked ~ .nav-check-span {
+nav .nav-check .nav-check-input:checked ~ .nav-check-span {
   background: white;
 }
-.nav-check .nav-check-span::before {
+nav .nav-check .nav-check-span::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -76,10 +75,10 @@ nav .nav-link {
   border-radius: 50%;
   transition: 0.5s;
 }
-.nav-check .nav-check-input:checked ~ .nav-check-span::before {
+nav .nav-check .nav-check-input:checked ~ .nav-check-span::before {
   transform: translateX(-50px);
 }
-.nav-check .nav-check-span::after {
+nav .nav-check .nav-check-span::after {
   content: "";
   position: absolute;
   top: 2px;
@@ -91,6 +90,6 @@ nav .nav-link {
   transition: 0.5s;
   transform: translateX(50px);
 }
-.nav-check .nav-check-input:checked ~ .nav-check-span::after {
+nav .nav-check .nav-check-input:checked ~ .nav-check-span::after {
   transform: translateX(0px);
 }/*# sourceMappingURL=navbar.css.map */

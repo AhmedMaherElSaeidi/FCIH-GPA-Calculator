@@ -62,10 +62,14 @@ body main > section {
 }
 .field-inputs > .inputs-container > .inputs-items > input {
   margin: 1em;
+  width: 15em;
   height: 2.4em;
   text-align: center;
   border-style: none;
   border-radius: 0.4em;
+}
+.field-inputs > .inputs-container > .inputs-items > input:focus-visible {
+  outline: none;
 }
 
 .field-screen {
@@ -88,7 +92,7 @@ body main > section {
   display: grid;
   place-items: center;
   position: relative;
-  font-weight: 600;
+  font-weight: bold;
   filter: saturate(2);
   font-size: max(3vmin, 0.65rem);
 }
@@ -107,12 +111,19 @@ body main > section {
 }
 
 @media screen and (max-width: 767px) {
+  .field-inputs > section {
+    margin-bottom: 0.25em;
+  }
   .inputs-container,
   .inputs-container > section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+  .inputs-container input,
+  .inputs-container > section input {
+    width: 20em;
   }
   .field-contents {
     width: 90%;

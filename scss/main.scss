@@ -52,9 +52,13 @@ body {
     @include flex-center(true);
     > .inputs-items > input {
       margin: 1em;
+      width: 15em;
       height: 2.4em;
       text-align: center;
       @include border(none, 0.4em, false);
+    }
+    > .inputs-items > input:focus-visible {
+      outline: none;
     }
   }
 }
@@ -71,7 +75,7 @@ body {
     --hue: 220;
     --holesize: 65%;
     --track-bg: #242424;
-    
+
     block-size: 20vmin;
     inline-size: 20vmin;
     min-inline-size: 35px;
@@ -79,10 +83,10 @@ body {
     display: grid;
     place-items: center;
     position: relative;
-    font-weight: 600;
+    font-weight: bold;
     filter: saturate(2);
     font-size: max(3vmin, 0.65rem);
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -96,15 +100,21 @@ body {
       mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
     }
   }
-  
 }
 
 @media screen and (max-width: 767px) {
   //Field inputs & Field Screen
+  .field-inputs > section {
+    margin-bottom: 0.25em;
+  }
+
   .inputs-container,
   .inputs-container > section {
     @include flex-center;
     flex-direction: column;
+    input {
+      width: 20em;
+    }
   }
 
   //Field Contents
