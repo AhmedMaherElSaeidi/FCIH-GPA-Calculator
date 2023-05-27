@@ -145,6 +145,7 @@ const darkTheme = () => {
     setClass('background-darkTheme', 'background-lightTheme');
     setClass('blur-bckground-darkTheme', 'blur-bckground-lightTheme');
     setClass('solid-bckground-darkTheme', 'solid-bckground-lightTheme');
+    document.querySelector('.RadialProgress').style.setProperty('--track-bg', 'white');
 }
 
 const lightTheme = () => {
@@ -152,6 +153,7 @@ const lightTheme = () => {
     setClass('background-lightTheme', 'background-darkTheme');
     setClass('blur-bckground-lightTheme', 'blur-bckground-darkTheme');
     setClass('solid-bckground-lightTheme', 'solid-bckground-darkTheme');
+    document.querySelector('.RadialProgress').style.setProperty('--track-bg', 'black')
 }
 
 const getCachedTheme = (bool = null) => {

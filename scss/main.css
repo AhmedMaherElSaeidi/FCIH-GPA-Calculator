@@ -89,7 +89,7 @@ body main > section {
   place-items: center;
   position: relative;
   font-weight: 700;
-  filter: brightness(1);
+  filter: saturate(2);
   font-size: max(3vmin, 0.5rem); /* Half the original size */
 }
 .field-screen .RadialProgress::before {
