@@ -1,7 +1,7 @@
 const values = {
-    grade: ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'F'],
-    value: [4, 3.75, 3.4, 3.1, 2.8, 2.5, 2.25, 2, 1],
-    hrs: range(9)
+    grade: ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D'],
+    value: [4, 3.75, 3.4, 3.1, 2.8, 2.5, 2.25, 2],
+    hrs: range(6)
 };
 
 // METHODS GENERATORS
@@ -9,10 +9,10 @@ function genKey() {
     return Math.floor(Math.random() * 1e12 + 1);
 }
 
-function range(len) {
+function range(max, min = 2) {
     const _array = []
-    for (let index = 0; index < len; index++)
-        _array.push(index + 1)
+    for (let index = min; index <= max; index++)
+        _array.push(index)
 
     return _array;
 }
@@ -92,7 +92,7 @@ function setProgress(progress) {
     const radialProgress = document.querySelector('.RadialProgress');
     const value = `${progress}%`;
     radialProgress.style.setProperty('--progress', value)
-    radialProgress.innerHTML = value
+    radialProgress.innerHTML = `<section class="text-center "><span>${value}</span><br/><span style="font-size:.65em;">Cumm GPA</span></section>`
     radialProgress.setAttribute('aria-valuenow', value)
 }
 

@@ -68,20 +68,20 @@ body {
     line-height: 1.5em;
   }
   .RadialProgress {
-    --hue: 280;
+    --hue: 220;
     --holesize: 65%;
     --track-bg: #242424;
     
-    block-size: 15vmin;
-    inline-size: 15vmin;
-    min-inline-size: 30px;
-    min-block-size: 30px;
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 35px;
+    min-block-size: 35px;
     display: grid;
     place-items: center;
     position: relative;
-    font-weight: 700;
+    font-weight: 600;
     filter: saturate(2);
-    font-size: max(3vmin, 0.5rem); /* Half the original size */
+    font-size: max(3vmin, 0.65rem);
     
     &::before {
       content: "";
