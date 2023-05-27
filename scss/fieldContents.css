@@ -13,6 +13,7 @@ main > .field-contents > .field-subject {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  animation: up-down 0.5s alternate;
 }
 main > .field-contents > .field-subject > .field-subject-inputs {
   display: flex;
@@ -70,5 +71,13 @@ main > .field-adddbtn > button:hover::after {
 @media screen and (max-width: 760px) {
   main > .field-contents {
     width: 90%;
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(-0.5em);
+  }
+  100% {
+    transform: none;
   }
 }/*# sourceMappingURL=fieldContents.css.map */
