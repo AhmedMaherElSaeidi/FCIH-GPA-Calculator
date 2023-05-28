@@ -29,8 +29,8 @@ main > .field-contents > .field-subject > .field-subject-inputs > select {
   border-radius: 0.4em;
 }
 main > .field-contents > .field-subject > .field-subject-inputs > select:hover {
-  color: orange;
-  box-shadow: 1px 1px 6px orange, 0 0 5px orange, 0 0 5px orange;
+  color: rgba(38, 202, 202, 0.8666666667);
+  box-shadow: 1px 1px 6px rgba(38, 202, 202, 0.8666666667), 0 0 5px rgba(38, 202, 202, 0.8666666667), 0 0 5px rgba(38, 202, 202, 0.8666666667);
 }
 main > .field-contents > .field-subject > .field-subject-inputs > button {
   width: 3em;

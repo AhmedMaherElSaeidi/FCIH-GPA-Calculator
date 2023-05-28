@@ -92,7 +92,7 @@ function setProgress(progress) {
     const radialProgress = document.querySelector('.RadialProgress');
     const value = `${progress}%`;
     radialProgress.style.setProperty('--progress', value)
-    radialProgress.innerHTML = `<section class="text-center"><span>${value}</span><br/><span style="font-size:.7em;">Cumm GPA</span></section>`
+    radialProgress.innerHTML = `<section class="text-center"><span>${value}</span><br/><span style="font-size:.7em;">Cumm. GPA</span></section>`
     radialProgress.setAttribute('aria-valuenow', value)
 }
 
