@@ -40,7 +40,7 @@ nav {
     display: flex;
     align-items: center;
     padding: 0.52em;
-    span {
+    label {
       float: right;
       margin-right: 0.45em;
     }
@@ -56,7 +56,6 @@ nav {
       width: 40px;
       height: 20px;
       background: #1b76a5;
-      cursor: pointer;
       border-radius: 20px;
       overflow: hidden;
       transition: ease-in 0.5s;
@@ -98,5 +97,8 @@ nav {
     .nav-check-input:checked ~ .nav-check-span::after {
       transform: translateX(0px);
     }
+  }
+  .nav-check:hover label{
+    cursor: pointer !important;
   }
 }
