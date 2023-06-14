@@ -12,7 +12,7 @@ Enjoy using the online GPA calculator with your preferred theme!
 URL : https://ahmedmaherelsaeidi.github.io/GPACalc/
 
 # Online GPA Calculator Overview
-![Alt Text](./assets/images/Online%20Calculator%20Overview.jpg)
+![Alt Text]("./assets/images/Online%20Calculator%20Overview.jpg")
 
 
 
