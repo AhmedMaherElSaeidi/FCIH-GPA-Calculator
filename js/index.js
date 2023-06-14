@@ -26,12 +26,14 @@ function removeField(field_id) {
     compute();
 }
 
-function setGPABoxData(set_id, get_id, type) {
+function setGPABoxData(set_id, get_id) {
     const setter = document.getElementById(set_id);
     const getter = document.getElementById(get_id);
 
-    const grade = `${getter.value} [ ${values.value[values.grade.indexOf(getter.value)]} ]`
-    setter.innerText = (type === 'g') ? grade : getter.value;
+    if (getter.value == -1)
+        setter.innerText = 'Select Grade';
+    else
+        setter.innerText = getter.value;
 }
 
 function getGPABoxComponent(container = 'field-contents') {
@@ -62,8 +64,8 @@ function getGPABoxComponent(container = 'field-contents') {
     </div>`;
 
     field.appendChild(div);
-    setGPABoxData(`setG-${key}`, `getG-${key}`, `g`);
-    setGPABoxData(`setH-${key}`, `getH-${key}`, `h`);
+    setGPABoxData(`setG-${key}`, `getG-${key}`);
+    setGPABoxData(`setH-${key}`, `getH-${key}`);
     setTheme()
 }
 
@@ -177,6 +179,62 @@ const getCachedTheme = (bool = null) => {
 const setTheme = (that = null) => {
     const checked = that === null ? getCachedTheme() : getCachedTheme(that.checked);
     checked ? darkTheme() : lightTheme();
+}
+
+//Settings Window
+function openSettingsMenu() {
+    const isDark = getData('dark-theme')[0].isDark;
+    const main = document.getElementById('fields-parent-main');
+    const fieldScreen = document.getElementById('field-screen');
+
+    if (main.childElementCount === 5) {
+        closeSettingsMenu();
+        return;
+    }
+
+    const div = document.createElement('section');
+    div.setAttribute('id', 'field-settings')
+    div.setAttribute('class', isDark ? 'field-settings blur-bckground-darkTheme' : 'field-settings blur-bckground-lightTheme')
+
+    div.innerHTML =
+        `<section>
+        <h4><i class="fa-solid fa-screwdriver-wrench"></i> Control Panel</h4>
+    </section>
+    <section id="field-settings-data">
+    ${values.grade.map((value, index) => `<section><section>${value} :</section><input type="text" name="array-new-values[]" value="${values.value[index]}"></section>`).join('')}
+    </section>
+    <section id="field-settings-btn">
+        <button type="button" class="${isDark ? 'solid-bckground-darkTheme' : 'solid-bckground-lightTheme'}" onclick="setSettingsData()"><i class="fa-solid fa-wrench"></i> Apply</button>
+        <button type="button" class="${isDark ? 'solid-bckground-darkTheme' : 'solid-bckground-lightTheme'}" onclick="resetSettingsData()"><i class="fa-sharp fa-solid fa-rotate-left"></i> Reset</button>
+        <button type="button" class="${isDark ? 'solid-bckground-darkTheme' : 'solid-bckground-lightTheme'}" onclick="closeSettingsMenu()"><i class="fa-solid fa-xmark"></i> Close</button>
+    </section>`
+
+    main.insertBefore(div, fieldScreen)
+}
+
+function setSettingsData() {
+    const array_values = document.getElementsByName("array-new-values[]");
+    array_values.forEach((element, index) => values.value[index] = element.value);
+
+    alert("New weights were applied successfully.")
+    compute();
+    closeSettingsMenu();
+}
+
+function resetSettingsData() {
+    values.value = [4, 3.75, 3.4, 3.1, 2.8, 2.5, 2.25, 2];
+    const div = document.getElementsByName("array-new-values[]");
+    div.forEach((element, index) => element.value = values.value[index]);
+
+    alert("weights were reset successfully.");
+    compute();
+    closeSettingsMenu();
+}
+
+function closeSettingsMenu() {
+    const main = document.getElementById('fields-parent-main');
+    const settingsMenu = document.getElementById('field-settings')
+    main.removeChild(settingsMenu);
 }
 
 // LocalStorage Methods.

@@ -97,7 +97,64 @@ body {
       border-radius: 50%;
       z-index: -1;
       background: conic-gradient(#08bbbb var(--progress, 0%), hsl(var(--hue) 100% 100%), hsl(var(--hue) 100% 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
+      -webkit-mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
       mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+    }
+  }
+}
+
+.field-settings {
+  > section:nth-child(1) {
+    border-radius: 0.2em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  > section:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5em 0em;
+    > section {
+      display: flex;
+      align-items: center;
+      margin: 0.4em;
+      > section {
+        width: 2em;
+        font-weight: bold;
+        margin-right: 1em;
+      }
+      > input {
+        border: none;
+        border-radius: 0.15em;
+        padding: 0.25em 0.5em;
+      }
+    }
+  }
+  > section:nth-child(3) {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > button {
+      margin: 0.4em;
+      padding: 0.4em;
+      width: 6em;
+      border-style: none;
+      border-radius: 0.3em;
+    }
+    > button:nth-child(1):hover {
+      color: $settings-btn-ok-hover;
+      box-shadow: 1px 1px 2px $settings-btn-ok-hover, 0 0 25px $settings-btn-ok-hover, 0 0 5px $settings-btn-ok-hover;
+    }
+    > button:nth-child(2):hover {
+      color: $settings-btn-reset-hover;
+      box-shadow: 1px 1px 2px $settings-btn-reset-hover, 0 0 25px $settings-btn-reset-hover, 0 0 5px $settings-btn-reset-hover;
+    }
+    > button:nth-child(3):hover {
+      color: $settings-btn-close-hover;
+      box-shadow: 1px 1px 2px $settings-btn-close-hover, 0 0 25px $settings-btn-close-hover, 0 0 5px $settings-btn-close-hover;
     }
   }
 }

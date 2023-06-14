@@ -107,7 +107,61 @@ body main > section {
   z-index: -1;
   background: conic-gradient(#08bbbb var(--progress, 0%), hsl(var(--hue), 100%, 100%), hsl(var(--hue), 100%, 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
   -webkit-mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
-          mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+  mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+}
+
+.field-settings > section:nth-child(1) {
+  border-radius: 0.2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field-settings > section:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5em 0em;
+}
+.field-settings > section:nth-child(2) > section {
+  display: flex;
+  align-items: center;
+  margin: 0.4em;
+}
+.field-settings > section:nth-child(2) > section > section {
+  width: 2em;
+  font-weight: bold;
+  margin-right: 1em;
+}
+.field-settings > section:nth-child(2) > section > input {
+  border: none;
+  border-radius: 0.15em;
+  padding: 0.25em 0.5em;
+}
+.field-settings > section:nth-child(3) {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field-settings > section:nth-child(3) > button {
+  margin: 0.4em;
+  padding: 0.4em;
+  width: 6em;
+  border-style: none;
+  border-radius: 0.3em;
+}
+.field-settings > section:nth-child(3) > button:nth-child(1):hover {
+  color: #1bdcdc;
+  box-shadow: 1px 1px 2px #1bdcdc, 0 0 25px #1bdcdc, 0 0 5px #1bdcdc;
+}
+.field-settings > section:nth-child(3) > button:nth-child(2):hover {
+  color: #ea1212;
+  box-shadow: 1px 1px 2px #ea1212, 0 0 25px #ea1212, 0 0 5px #ea1212;
+}
+.field-settings > section:nth-child(3) > button:nth-child(3):hover {
+  color: #12e112;
+  box-shadow: 1px 1px 2px #12e112, 0 0 25px #12e112, 0 0 5px #12e112;
 }
 
 @media screen and (max-width: 767px) {
@@ -128,4 +182,4 @@ body main > section {
   .field-contents {
     width: 90%;
   }
-}/*# sourceMappingURL=main.css.map */
+}
