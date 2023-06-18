@@ -74,7 +74,8 @@ body {
   .RadialProgress {
     --hue: 220;
     --holesize: 65%;
-    --track-bg: #242424;
+    --track-bg: white;
+    --fill-bg: #08bbbb;
 
     block-size: 20vmin;
     inline-size: 20vmin;
@@ -96,7 +97,7 @@ body {
       right: 0;
       border-radius: 50%;
       z-index: -1;
-      background: conic-gradient(#08bbbb var(--progress, 0%), hsl(var(--hue) 100% 100%), hsl(var(--hue) 100% 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
+      background: conic-gradient(var(--fill-bg) var(--progress, 0%), hsl(var(--hue) 100% 100%), hsl(var(--hue) 100% 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
       -webkit-mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
       mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
     }

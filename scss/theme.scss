@@ -2,7 +2,7 @@
 @use "./layouts/variables" as *;
 
 .background-lightTheme {
-  @include wallpaper("../assets/images/steve-johnson-L3d2KZJoiKk-unsplash.jpg");
+  @include wallpaper("../assets/images/sebastian-svenson-LpbyDENbQQg-unsplash.jpg");
 }
 
 .background-darkTheme {
@@ -14,7 +14,7 @@
 }
 
 .solid-bckground-lightTheme {
-  @include theme($white-color, $black-color);
+  @include theme(#ffffffb3, $black-color);
 }
 
 .blur-bckground-darkTheme {

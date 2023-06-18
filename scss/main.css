@@ -84,7 +84,8 @@ body main > section {
 .field-screen .RadialProgress {
   --hue: 220;
   --holesize: 65%;
-  --track-bg: #242424;
+  --track-bg: white;
+  --fill-bg: #08bbbb;
   block-size: 20vmin;
   inline-size: 20vmin;
   min-inline-size: 35px;
@@ -105,7 +106,7 @@ body main > section {
   right: 0;
   border-radius: 50%;
   z-index: -1;
-  background: conic-gradient(#08bbbb var(--progress, 0%), hsl(var(--hue), 100%, 100%), hsl(var(--hue), 100%, 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
+  background: conic-gradient(var(--fill-bg) var(--progress, 0%), hsl(var(--hue), 100%, 100%), hsl(var(--hue), 100%, 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
   -webkit-mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
   mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
 }
@@ -166,14 +167,14 @@ body main > section {
     margin-bottom: 0.25em;
   }
   .inputs-container,
-.inputs-container > section {
+  .inputs-container > section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
   .inputs-container input,
-.inputs-container > section input {
+  .inputs-container > section input {
     width: 20em;
   }
   .field-contents {

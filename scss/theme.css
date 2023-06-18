@@ -1,5 +1,5 @@
 .background-lightTheme {
-  background-image: url("../assets/images/steve-johnson-L3d2KZJoiKk-unsplash.jpg");
+  background-image: url("../assets/images/sebastian-svenson-LpbyDENbQQg-unsplash.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
@@ -16,7 +16,7 @@
 }
 
 .solid-bckground-lightTheme {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7019607843);
   color: black;
 }
 
