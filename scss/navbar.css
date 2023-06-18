@@ -44,7 +44,9 @@ nav .nav-check label {
   margin-right: 0.45em;
 }
 nav .nav-check .nav-check-input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   visibility: hidden;
   display: none;
 }
@@ -92,4 +94,4 @@ nav .nav-check .nav-check-input:checked ~ .nav-check-span::after {
 }
 nav .nav-check:hover label {
   cursor: pointer !important;
-}
+}/*# sourceMappingURL=navbar.css.map */
