@@ -148,13 +148,10 @@ body {
       color: $settings-btn-ok-hover;
       box-shadow: 1px 1px 2px $settings-btn-ok-hover, 0 0 25px $settings-btn-ok-hover, 0 0 5px $settings-btn-ok-hover;
     }
-    > button:nth-child(2):hover {
+    > button:nth-child(2):hover,
+    > button:nth-child(3):hover {
       color: $settings-btn-reset-hover;
       box-shadow: 1px 1px 2px $settings-btn-reset-hover, 0 0 25px $settings-btn-reset-hover, 0 0 5px $settings-btn-reset-hover;
-    }
-    > button:nth-child(3):hover {
-      color: $settings-btn-close-hover;
-      box-shadow: 1px 1px 2px $settings-btn-close-hover, 0 0 25px $settings-btn-close-hover, 0 0 5px $settings-btn-close-hover;
     }
   }
 }
