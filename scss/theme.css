@@ -31,8 +31,8 @@
 }
 
 .icon-darkTheme {
-  background-color: #767575;
-  color: white;
+  background-color: #ffffff;
+  color: black !important;
 }
 
 .icon-lightTheme {

@@ -2,9 +2,7 @@
 @use "./layouts/variables" as *;
 
 .background-lightTheme {
-  @include wallpaper(
-    "../assets/images/steve-johnson-L3d2KZJoiKk-unsplash.jpg"
-  );
+  @include wallpaper("../assets/images/steve-johnson-L3d2KZJoiKk-unsplash.jpg");
 }
 
 .background-darkTheme {
@@ -28,7 +26,7 @@
 }
 
 .icon-darkTheme {
-  @include theme(#767575, $white-color);
+  @include theme(#ffffff, $black-color !important);
 }
 
 .icon-lightTheme {
