@@ -51,14 +51,14 @@ function getGPABoxComponent(container = 'field-contents') {
         <hr>
     </div>
     <div class="field-subject-inputs mt-1">
-        <select name="array-grades" class="solid-bckground-lightTheme" id="getG-${key}" onchange="setGPABoxData('setG-${key}', 'getG-${key}', 'g')">
+        <select name="array-grades" id="getG-${key}" onchange="setGPABoxData('setG-${key}', 'getG-${key}', 'g')">
             <option value="-1" selected>Grade</option>
             ${values.grade.map((value) => `<option value="${value}">${value}</option>`).join("")}
             </select>
-        <select name="array-hrs" class="solid-bckground-lightTheme" id="getH-${key}" onchange="setGPABoxData('setH-${key}', 'getH-${key}', 'h')">
+        <select name="array-hrs" id="getH-${key}" onchange="setGPABoxData('setH-${key}', 'getH-${key}', 'h')">
             ${values.hrs.map((value) => `<option value="${value}" ${value == 3 ? "selected" : ""}>${value} hrs</option>`).join("")}
         </select>
-        <button type="button" class="solid-bckground-lightTheme" onclick="removeField('field-subject-${key}')">
+        <button type="button"  onclick="removeField('field-subject-${key}')">
         <i class="fa-solid fa-trash-can"></i>
         </button>
     </div>`;

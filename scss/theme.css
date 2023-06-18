@@ -21,7 +21,7 @@
 }
 
 .blur-bckground-darkTheme {
-  background-color: rgba(43, 43, 43, 0.7882352941);
+  background-color: rgba(9, 18, 44, 0.7882352941);
   color: white;
 }
 
@@ -38,4 +38,4 @@
 .icon-lightTheme {
   background-color: #dadada;
   color: black;
-}
+}/*# sourceMappingURL=theme.css.map */

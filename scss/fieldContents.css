@@ -13,7 +13,8 @@ main > .field-contents > .field-subject {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  animation: up-down 0.5s alternate;
+  -webkit-animation: up-down 0.5s alternate;
+          animation: up-down 0.5s alternate;
 }
 main > .field-contents > .field-subject > .field-subject-inputs {
   display: flex;
@@ -25,12 +26,13 @@ main > .field-contents > .field-subject > .field-subject-inputs > select {
   width: 6em;
   height: 1.8em;
   margin: 0.2em;
+  font-weight: 400;
   border-style: none;
   border-radius: 0.4em;
 }
 main > .field-contents > .field-subject > .field-subject-inputs > select:hover {
-  color: rgba(38, 202, 202, 0.8666666667);
-  box-shadow: 1px 1px 6px rgba(38, 202, 202, 0.8666666667), 0 0 5px rgba(38, 202, 202, 0.8666666667), 0 0 5px rgba(38, 202, 202, 0.8666666667);
+  color: rgba(0, 0, 0, 0.8666666667);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8666666667), 0 0 5px rgba(0, 0, 0, 0.8666666667), 0 0 5px rgba(0, 0, 0, 0.8666666667);
 }
 main > .field-contents > .field-subject > .field-subject-inputs > button {
   width: 3em;
@@ -73,7 +75,7 @@ main > .field-adddbtn > button:hover::after {
     width: 90%;
   }
 }
-@keyframes up-down {
+@-webkit-keyframes up-down {
   0% {
     transform: translateY(-0.5em);
   }
@@ -81,3 +83,11 @@ main > .field-adddbtn > button:hover::after {
     transform: none;
   }
 }
+@keyframes up-down {
+  0% {
+    transform: translateY(-0.5em);
+  }
+  100% {
+    transform: none;
+  }
+}/*# sourceMappingURL=fieldContents.css.map */

@@ -22,7 +22,8 @@ main > .field-contents {
     > .field-subject-inputs > select {
       width: 6em;
       height: 1.8em;
-      margin: 0.2em;
+      margin: 0.2em;  
+      font-weight: 400;
       @include border(none, 0.4em, false);
     }
 
