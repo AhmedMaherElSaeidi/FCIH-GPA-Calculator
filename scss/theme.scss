@@ -10,7 +10,7 @@
 }
 
 .solid-bckground-darkTheme {
-  @include theme($black-color, $white-color);
+  @include theme($white-color, $black-color);
 }
 
 .solid-bckground-lightTheme {
