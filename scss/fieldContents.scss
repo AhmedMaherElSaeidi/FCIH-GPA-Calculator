@@ -6,7 +6,8 @@ main > .field-contents {
   @include flex-center(true);
 
   > .field-subject {
-    width: 20em;
+    width: 21em;
+    height: 12em;
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 0.25em;

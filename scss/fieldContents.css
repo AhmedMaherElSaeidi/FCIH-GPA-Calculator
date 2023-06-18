@@ -6,14 +6,16 @@ main > .field-contents {
   flex-wrap: wrap;
 }
 main > .field-contents > .field-subject {
-  width: 20em;
+  width: 21em;
+  height: 12em;
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 0.25em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  animation: up-down 0.5s alternate;
+  -webkit-animation: up-down 0.5s alternate;
+          animation: up-down 0.5s alternate;
 }
 main > .field-contents > .field-subject > .field-subject-inputs {
   display: flex;
@@ -72,6 +74,14 @@ main > .field-adddbtn > button:hover::after {
 @media screen and (max-width: 760px) {
   main > .field-contents {
     width: 90%;
+  }
+}
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(-0.5em);
+  }
+  100% {
+    transform: none;
   }
 }
 @keyframes up-down {
