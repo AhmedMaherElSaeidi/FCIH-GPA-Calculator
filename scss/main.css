@@ -166,14 +166,14 @@ body main > section {
     margin-bottom: 0.25em;
   }
   .inputs-container,
-  .inputs-container > section {
+.inputs-container > section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
   .inputs-container input,
-  .inputs-container > section input {
+.inputs-container > section input {
     width: 20em;
   }
   .field-contents {
