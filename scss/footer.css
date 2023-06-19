@@ -84,12 +84,12 @@ footer .footer-row .rounded-social-buttons .social-button.youtube:focus {
   background: #fefefe;
   border-color: #bb0000;
 }
-footer .footer-row .rounded-social-buttons .social-button.instagram {
-  background: #125688;
+footer .footer-row .rounded-social-buttons .social-button.github {
+  background: #000000;
 }
-footer .footer-row .rounded-social-buttons .social-button.instagram:hover,
-footer .footer-row .rounded-social-buttons .social-button.instagram:focus {
-  color: #125688;
+footer .footer-row .rounded-social-buttons .social-button.github:hover,
+footer .footer-row .rounded-social-buttons .social-button.github:focus {
+  color: #000000;
   background: #fefefe;
-  border-color: #125688;
+  border-color: #000000;
 }/*# sourceMappingURL=footer.css.map */
