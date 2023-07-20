@@ -9,7 +9,7 @@ This is an online GPA calculator that allows you to calculate your GPA and cumul
 
 
 Enjoy using the online GPA calculator with your preferred theme!
-URL : https://ahmedmaherelsaeidi.github.io/GPACalc/
+URL : https://ahmedmaherelsaeidi.github.io/FCIH-GPA-Calculator/
 
 # Online GPA Calculator Overview
 ![Alt Text](./assets/images/OnlineCalculatorOverview.png)
